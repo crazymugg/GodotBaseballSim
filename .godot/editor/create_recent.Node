@@ -1,6 +1,7 @@
+Button
+CanvasLayer
 TextureRect
 MarginContainer
-Button
 Label
 PanelContainer
 VBoxContainer
@@ -11,4 +12,3 @@ GridContainer
 Panel
 HSeparator
 Container
-CenterContainer

@@ -6,7 +6,7 @@ class_name MainPortal
 
 # NOTE: URL to find white icons: https://www.iconsdb.com/white-icons/?page=2
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var fps_float: float = Engine.get_frames_per_second()    
 	fps_label.text = str(fps_float)
 
@@ -20,9 +20,9 @@ func _on_debug_button_toggled(toggled_on):
 	$VBoxContainer/FooterContainer/FooterHBoxContainer/DebugEditMarginContainer.visible = toggled_on
 	$VBoxContainer/FooterContainer/FooterHBoxContainer/FPSMarginContainer.visible = toggled_on
 
+
 func _on_debug_edit_text_submitted(new_text):
 	display_debug(new_text)
-
 
 
 func _on_calendar_button_pressed():
@@ -61,3 +61,13 @@ func _on_button_6_pressed():
 
 func _on_inbox_button_toggled(toggled_on):
 	$VBoxContainer/ContentContainer/HBoxContainer/PanelContainer/TestContent.visible = toggled_on
+
+
+func _on_btn_quit_pressed():
+	get_tree().quit()
+
+
+func _on_btn_db_pressed():
+	var poop = load("res://Source/Menus/db.gd")
+	poop.test()
+
